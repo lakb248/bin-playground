@@ -1,0 +1,24 @@
+# node module
+node_modules/
+
+# test coveage result
+test/coverage
+
+# sass cache
+.sass-cache/
+
+# log file
+*.log
+
+# source blog
+source/
+
+# hexo themes
+themes/
+
+# hexo scaffolds
+scaffolds/
+
+# hexo config file
+_config.yml
+db.json
