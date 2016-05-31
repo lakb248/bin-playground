@@ -1,0 +1,8 @@
+@import "./highlight.scss";
+@import "./markdown.scss";
+.post-content {
+    color: #555;
+    // padding: 0 20px;
+    @include highlight();
+    @include markdown();
+}

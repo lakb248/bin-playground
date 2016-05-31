@@ -2,11 +2,33 @@
 <html>
     <head>
         <meta charset="utf-8">
-        <title></title>
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
+        <title>My Coding Life</title>
+        <link rel="stylesheet" href="/build/index.css">
     </head>
     <body>
-        Hello Vue!!!
-        <script type="text/javascript" src="./build/vendor.bundle.js"></script>
-        <script type="text/javascript" src="./build/build.js"></script>
+        <div id="wrap">
+            <header v-show="isHeaderShow">
+                <div class="section">
+                    <div id="logo"></div>
+                    <nav>
+                        <ul>
+                            <li v-on:click="go('/')"><a href="javascript:void(0);">Home</a></li>
+                            <li v-on:click="go('/archive')"><a href="javascript:void(0);">Archive</a></li>
+                            <li v-on:click="go('/tags')"><a href="javascript:void(0);">Tags</a></li>
+                            <li v-on:click="go('/about')"><a href="javascript:void(0);">About</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </header>
+            <div id="content">
+                <router-view  class="view" transition="switch" transition-mode="out-in" keep-alive></router-view>
+            </div>
+        </div>
+        <footer>
+            <p>@2016 Bin Powered by <a href="https://github.com/ly-tools/hexo-generator-async">Hexo Generator</a> and <a href="http://vuejs.org/">Vuejs</a></p>
+        </footer>
+        <script type="text/javascript" src="/build/vendor.bundle.js"></script>
+        <script type="text/javascript" src="/build/build.js"></script>
     </body>
 </html>

@@ -1,0 +1,18 @@
+$footer-height: 40px;
+$footer-color: #232B2D;
+footer {
+    width: 100%;
+    height: $footer-height;
+    background: $footer-color;
+    p {
+        height: $footer-height;
+        line-height: $footer-height;
+        margin: 0px;
+        text-align: center;
+        color: #fff;
+        font-size: 13px;
+    }
+    a {
+        color: #337ab7;
+    }
+}

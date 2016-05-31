@@ -1,0 +1,22 @@
+* {
+    box-sizing: border-box;
+}
+html, body {
+    min-width: 1000px;
+    height: 100%;
+    margin: 0px;
+    padding: 0px;
+    font-family: "微软雅黑", "Microsoft Yahei";
+}
+ul {
+    list-style: none;
+}
+a {
+    text-decoration: none;
+}
+
+.section {
+    width: 1000px;
+    margin: 0px auto;
+    padding-top: 1px;
+}

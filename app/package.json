@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "webpack --progress --colors --watch --config webpack.dev.config.js",
+    "dev": "rimraf build/ && webpack --progress --colors --watch --config webpack.dev.config.js",
     "build": "rimraf build/ && webpack --progress --colors --config webpack.prod.config.js"
   },
   "repository": {
@@ -31,7 +31,7 @@
     "css-loader": "^0.23.1",
     "extract-text-webpack-plugin": "^1.0.1",
     "file-loader": "^0.8.5",
-    "node-sass": "^3.4.2",
+    "node-sass": "^3.7.0",
     "nodemon": "^1.8.1",
     "rimraf": "^2.5.2",
     "ruby-sass-loader": "^0.2.0",
