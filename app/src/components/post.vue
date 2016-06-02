@@ -1,7 +1,7 @@
 <template>
     <div class="post-item">
         <div class="post-title">
-            <a href="/blog{{post.permalink}}">
+            <a v-link="{path: '/blog' + post.permalink}">
                 {{post.title}}
             </a>
         </div>
@@ -27,7 +27,7 @@
         props: ['post']
     }
 </script>
-<style lang="sass">
+<style lang="sass" scoped>
     $font-color: #232B2D;
     .post-item {
         width: 100%;

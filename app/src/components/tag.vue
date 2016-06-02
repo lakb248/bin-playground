@@ -1,5 +1,5 @@
 <template>
-    <a href="#" v-bind:style="{background: color, borderColor: color}">{{tag.name}}</a>
+    <a v-link="{path: '/tags'}" v-bind:style="{background: color, borderColor: color}">{{tag.name}}</a>
 </template>
 <script>
     var colorList = [{

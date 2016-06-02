@@ -10,13 +10,13 @@
         <div id="wrap">
             <header v-show="isHeaderShow">
                 <div class="section">
-                    <div id="logo"></div>
+                    <div id="logo"><a href="/"></a></div>
                     <nav>
                         <ul>
-                            <li v-on:click="go('/')"><a href="javascript:void(0);">Home</a></li>
-                            <li v-on:click="go('/archive')"><a href="javascript:void(0);">Archive</a></li>
-                            <li v-on:click="go('/tags')"><a href="javascript:void(0);">Tags</a></li>
-                            <li v-on:click="go('/about')"><a href="javascript:void(0);">About</a></li>
+                            <li><a v-link="{path: '/'}">Home</a></li>
+                            <li><a v-link="{path: '/archive'}">Archive</a></li>
+                            <li><a v-link="{path: '/tags'}">Tags</a></li>
+                            <li><a v-link="{path: '/about'}">About</a></li>
                         </ul>
                     </nav>
                 </div>
