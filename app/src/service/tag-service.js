@@ -6,6 +6,6 @@ export default {
                 if (res.ok) {
                     return res.data;
                 }
-            })
+            });
     }
 };

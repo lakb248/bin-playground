@@ -1,5 +1,6 @@
 import Vue from 'vue';
 var baseUrl = '/async';
+// var baseUrl = '/';
 export default {
     getArchiveOverview() {
         return Vue.http.get(baseUrl + '/archives.json')

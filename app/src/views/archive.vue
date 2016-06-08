@@ -1,9 +1,14 @@
 <template>
     <div class="section">
         <ul id="archive-container">
-            <li v-for="archives in archivesList">
+            <li v-for="archives in archivesList" transition="fade">
                 <div class="archive-date">
-                    {{archives.year}}-{{archives.month}}
+                    <div class="archive-year">
+                        {{archives.year}}
+                    </div>
+                    <div class="archive-month">
+                        {{archives.month}}月
+                    </div>
                 </div>
                 <div class="archive-list">
                     <ul>
@@ -59,6 +64,7 @@
         & > li {
             width: 100%;
             border-left: 100px solid transparent;
+            margin-bottom: 50px;
         }
     }
     .archive-date {
@@ -67,8 +73,21 @@
         margin-left: -100px;
         padding-top: 20px;
         font-size: 24px;
+        text-align: center;
     }
-    .archive-list {
-
+    .archive-year {
+        color: #C6CBCC;
+        font-size: 32px;
+    }
+    .archive-month {
+        color: #C6CBCC;
+        font-size: 24px;
+    }
+    .fade-transition {
+        transition: all 1s;
+    }
+    .fade-enter, .fade-leave {
+        margin-left: -50%;
+        opacity: 0;
     }
 </style>

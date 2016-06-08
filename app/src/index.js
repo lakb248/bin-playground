@@ -18,7 +18,7 @@ Vue.filter('timeStampFilter', function (input) {
 
 var router = new VueRouter({
     hashbang: false,
-    history: true
+    history: false
 });
 
 var App = Vue.extend({
@@ -46,13 +46,19 @@ router.map({
         }
     },
     '/tags': {
-        name: 'archive',
+        name: 'tags',
         component: (resolve) => {
             require(['./views/tags.vue'], resolve);
         }
     },
+    '/tags/:name': {
+        name: 'tag',
+        component: (resolve) => {
+            require(['./views/tag.vue'], resolve);
+        }
+    },
     '/about': {
-        name: 'archive',
+        name: 'about',
         component: (resolve) => {
             require(['./views/about.vue'], resolve);
         }

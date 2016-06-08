@@ -45,20 +45,17 @@
                                             var posts = data.posts;
                                             var length = posts.length;
                                             for (var i = 0; i < length; i ++) {
-                                                self.posts.push(posts[i])
+                                                self.posts.push(posts[i]);
                                             }
                                             touchBottom = false;
                                         }, error => {
                                             console.log(error);
-                                        })
+                                        });
                                 }
                             }
                         }
                     });
                 });
-
-
-
         }
     }
 </script>
