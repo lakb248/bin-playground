@@ -26,11 +26,6 @@ var App = Vue.extend({
         return {
             isHeaderShow: true
         }
-    },
-    methods: {
-        go(route) {
-            this.$router.go(route);
-        }
     }
 });
 

@@ -7,7 +7,6 @@ app.use(express.static(path.join(__dirname, 'app')));
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.get('*', function(request, response){
-    console.log('render index.html');
     response.sendFile(path.join(__dirname, '/app/index.html'));
     response.end();
 });
