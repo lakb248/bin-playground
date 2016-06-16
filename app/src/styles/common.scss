@@ -2,7 +2,7 @@
     box-sizing: border-box;
 }
 html, body {
-    min-width: 1000px;
+    // min-width: 1000px;
     height: 100%;
     margin: 0px;
     padding: 0px;
@@ -14,10 +14,19 @@ ul {
 a {
     text-decoration: none;
 }
-
+.hide {
+    display: none;
+}
+.show {
+    display: block;
+}
 .section {
-    width: 1000px;
     margin: 0px auto;
     padding-top: 1px;
     overflow: hidden;
+}
+@media (min-width: 1000px) {
+    .section {
+        width: 1000px;
+    }
 }

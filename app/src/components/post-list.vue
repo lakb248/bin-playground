@@ -60,6 +60,9 @@
     }
 </script>
 <style lang="sass" scoped>
+    ul {
+        padding: 0px;
+    }
     li {
         margin-bottom: 20px;
         width: 100%;

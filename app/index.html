@@ -11,8 +11,17 @@
             <header v-show="isHeaderShow">
                 <div class="section">
                     <div id="logo"><a href="/"></a></div>
-                    <nav>
+                    <nav id="horizontal-nav">
                         <ul>
+                            <li><a v-link="{path: '/'}">Home</a></li>
+                            <li><a v-link="{path: '/archive'}">Archive</a></li>
+                            <li><a v-link="{path: '/tags'}">Tags</a></li>
+                            <!-- <li><a v-link="{path: '/about'}">About</a></li> -->
+                        </ul>
+                    </nav>
+                    <div id="min-nav" v-on:click="isMinNavShow = !isMinNavShow"></div>
+                    <nav id="vertical-nav" class="hide" v-bind:class="{'show': isMinNavShow}">
+                        <ul v-on:click="isMinNavShow = false">
                             <li><a v-link="{path: '/'}">Home</a></li>
                             <li><a v-link="{path: '/archive'}">Archive</a></li>
                             <li><a v-link="{path: '/tags'}">Tags</a></li>

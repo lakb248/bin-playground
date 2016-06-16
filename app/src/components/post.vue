@@ -39,8 +39,8 @@
     }
     .post-title {
         float: left;
-        height: 30px;
         line-height: 30px;
+        margin-right: 20px;
         a {
             color: $font-color;
         }
@@ -55,7 +55,7 @@
         height: 18px;
         margin: 0px;
         padding: 0px;
-        margin-left: 20px;
+        margin-bottom: 20px;
         margin-top: 6px;
         li {
             float: left;

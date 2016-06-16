@@ -24,7 +24,8 @@ var router = new VueRouter({
 var App = Vue.extend({
     data() {
         return {
-            isHeaderShow: true
+            isHeaderShow: true,
+            isMinNavShow: false
         }
     }
 });
