@@ -71,6 +71,11 @@ router.redirect({
     '*': '/'
 });
 
+router.beforeEach(function (transition) {
+    window.scrollTo(0, 0);
+    transition.next();
+});
+
 router.start(App, document.body, function () {
     // router.app.isDebug = Vue.config.debug;
     var lastScrollTop = document.body.scrollTop;
@@ -92,5 +97,11 @@ router.start(App, document.body, function () {
                 router.app.isHeaderShow = true;
             }
         }, 50);
+    });
+    var minNav = document.getElementById('min-nav');
+    document.addEventListener('click', (e) => {
+        if (!minNav.contains(e.target)) {
+            router.app.isMinNavShow = false;
+        }
     });
 });
