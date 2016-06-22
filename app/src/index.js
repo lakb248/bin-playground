@@ -89,6 +89,7 @@ router.start(App, document.body, function () {
             if (currentScrollTop > 120) {
                 if (currentScrollTop - lastScrollTop > 0) {
                     router.app.isHeaderShow = false;
+                    router.app.isMinNavShow = false;
                 } else {
                     router.app.isHeaderShow = true;
                 }
