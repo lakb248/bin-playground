@@ -59,11 +59,15 @@
 <style lang="sass">
     #tags-container {
         width: 100%;
+        padding-left: 0px;
         & > li {
             width: 100%;
             border-left: 100px solid transparent;
             margin-bottom: 50px;
         }
+    }
+    .post-list ul {
+        padding-left: 0px;
     }
     .tag-title {
         float: left;
@@ -78,5 +82,16 @@
     .fade-enter, .fade-leave {
         margin-left: -50%;
         opacity: 0;
+    }
+    @media (max-width: 550px) {
+        #tags-container > li {
+            border: none;
+        }
+        .tag-title {
+            float: none;
+            display: inline-block;
+            margin-left: 0px;
+            padding-left: 20px;
+        }
     }
 </style>

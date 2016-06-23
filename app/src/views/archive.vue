@@ -61,6 +61,7 @@
 <style lang="sass">
     #archive-container {
         width: 100%;
+        padding-left: 0px;
         & > li {
             width: 100%;
             border-left: 100px solid transparent;
@@ -83,11 +84,23 @@
         color: #C6CBCC;
         font-size: 24px;
     }
+    .archive-list ul {
+        padding-left: 0px;
+    }
     .fade-transition {
         transition: all 1s;
     }
     .fade-enter, .fade-leave {
         margin-left: -50%;
         opacity: 0;
+    }
+    @media (max-width: 500px) {
+        #archive-container > li {
+            border: none;
+        }
+        .archive-date {
+            float: none;
+            margin-left: 0px;
+        }
     }
 </style>
