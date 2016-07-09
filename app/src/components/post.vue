@@ -16,6 +16,11 @@
         <div class="post-content">
             {{{post.content}}}
         </div>
+        <section id="comments" v-if="overview == 0">
+            <!-- 多说评论框 start -->
+            <div class="ds-thread" data-thread-key="{{post.permalink}}" data-title="{{post.title}}" data-url="{{'/blog' + post.permalink}}"></div>
+            <!-- 多说评论框 end -->
+        </section>
     </div>
 </template>
 <script>
@@ -24,7 +29,18 @@
         components: {
             tag: tag
         },
-        props: ['post']
+        props: ['post', 'overview'],
+        ready() {
+            if (this.overview == 0) {
+                if (!window.DUOSHUO) {
+                    // if it is not overview, show duoshuo comment
+                    window.duoshuoQuery = {short_name:'lakb248'};
+                    require(['!../lib/duoshuo.js']);
+                } else {
+                    DUOSHUO.EmbedThread(this.$el.querySelector('#comments div'));
+                }
+            }
+        }
     }
 </script>
 <style lang="sass" scoped>

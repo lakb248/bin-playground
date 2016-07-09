@@ -13,7 +13,7 @@
                 <div class="archive-list">
                     <ul>
                         <li v-for="post in archives.posts">
-                            <post :post="post"></post>
+                            <post :post="post" overview="1"></post>
                         </li>
                     </ul>
                 </div>

@@ -1,6 +1,6 @@
 <template>
     <div class="section">
-        <post v-bind:post="post"></post>
+        <post v-bind:post="post" overview="0"></post>
     </div>
 </template>
 <script>
@@ -17,7 +17,6 @@
         },
         route: {
             data(transition) {
-                console.log(transition.to.params.path);
                 return postService.getPost(transition.to.params.path)
                     .then(function (post) {
                         return {

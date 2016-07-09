@@ -2,7 +2,7 @@
     <div class="section">
         <ul>
             <li v-for="post in posts">
-                <post :post="post"></post>
+                <post :post="post" overview="1"></post>
             </li>
         </ul>
     </div>

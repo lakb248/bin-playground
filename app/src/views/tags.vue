@@ -8,7 +8,7 @@
                 <div class="post-list">
                     <ul>
                         <li v-for="post in tag.posts">
-                            <post :post="post"></post>
+                            <post :post="post" overview="1"></post>
                         </li>
                     </ul>
                 </div>

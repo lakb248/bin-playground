@@ -1,7 +1,7 @@
 <template>
     <ul>
         <li v-for="post in posts" transition="fade">
-            <post v-bind:post="post"></post>
+            <post v-bind:post="post" overview="1"></post>
         </li>
     </ul>
 </template>
@@ -36,7 +36,6 @@
                             var clientHeight = document.body.clientHeight;
 
                             if ((scrollHeight - scrollTop - clientHeight) < 5) {
-                                console.log('bottom');
                                 touchBottom = true;
                                 if (curPage < totalPage) {
                                     curPage ++;
