@@ -41,7 +41,16 @@
         </footer>
         <script>
             var _hmt = _hmt || [];
-            if (location.href.indexOf('bin-playground') !== -1) {
+            if (location.href.indexOf('localhost') === -1) {
+                // clear console
+                var console = window.console;
+                for (var key in console) {
+                    if (console.hasOwnProperty(key)) {
+                        if (typeof console[key] === 'function') {
+                            console[key] = function () {};
+                        }
+                    }
+                }
                 (function() {
                   var hm = document.createElement("script");
                   hm.src = "//hm.baidu.com/hm.js?a9e62abf97b30350112c9bb8a45fd8f7";
