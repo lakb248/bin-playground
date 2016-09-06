@@ -39,6 +39,7 @@
     ul,
     ol,
     dl {
+      list-style: inherit;
       margin-top: 1.6em;
       margin-bottom: 1.6em;
     }
@@ -68,9 +69,13 @@
     }
     blockquote {
       font-family: Georgia, "Times New Roman", serif;
-      font-size: 1.4em;
+      font-size: 1em;
       margin: 1.6em 20px;
-      text-align: center;
+      text-align: left;
+      border-left: 2px solid #999;
+      background-color: #eee;
+      padding: 1px 0px;
+      padding-left: 20px;
     }
     blockquote footer {
       font-size: 14px;
