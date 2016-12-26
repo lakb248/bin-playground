@@ -13,7 +13,7 @@ module.exports = {
         path: require('path').resolve('build') + '/',
         publicPath: '/build/',
         filename: 'build.js',
-        chunkFilename: '[hash].[name].js'
+        chunkFilename: '[chunkHash].[name].js'
     },
     module: {
         loaders: [{
